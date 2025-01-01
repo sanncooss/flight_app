@@ -12,7 +12,7 @@ class BookingDetaisScreen extends StatefulWidget {
 class _BookingDetaisScreenState extends State<BookingDetaisScreen> {
   @override
   Widget build(BuildContext context) {
-    bool isToggled = true;
+    bool isToggled = false;
 
     return Scaffold(
         body: Padding(
@@ -181,10 +181,10 @@ class _BookingDetaisScreenState extends State<BookingDetaisScreen> {
               IconButton(
                   onPressed: () {
                     setState(() {
-                      isToggled = !isToggled;
-                    });
+                     isToggled = false;
+                    }); 
                   },
-                  icon: Icon(isToggled ? Icons.toggle_off : Icons.toggle_on))
+                  icon:  isToggled ? Icon(Icons.toggle_off) :Icon(Icons.toggle_on) )
             ],
           ),
         )

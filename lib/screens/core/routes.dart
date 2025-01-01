@@ -6,6 +6,7 @@ import 'package:flight_booking_app/screens/registration/singin/password_screen.d
 import 'package:flight_booking_app/screens/registration/singin/signin_screen.dart';
 import 'package:get/get.dart';
 
+
 class Routes {
   static const signup = '/signup';
   static const home = '/home';

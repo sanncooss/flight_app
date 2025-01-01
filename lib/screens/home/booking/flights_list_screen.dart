@@ -1,4 +1,3 @@
-import 'package:coupon_uikit/coupon_uikit.dart';
 import 'package:flight_booking_app/screens/core/routes.dart';
 import 'package:flight_booking_app/utils/colors.dart';
 import 'package:flight_booking_app/utils/sizedboxes.dart';
@@ -45,7 +44,9 @@ class FlightsListScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get
+                      },
                       icon: Icon(
                         Icons.keyboard_arrow_left,
                         color: white,
