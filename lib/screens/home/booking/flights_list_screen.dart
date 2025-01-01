@@ -45,7 +45,7 @@ class FlightsListScreen extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {
-                        Get
+                        Get.back();
                       },
                       icon: Icon(
                         Icons.keyboard_arrow_left,

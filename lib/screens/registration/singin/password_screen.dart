@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flight_booking_app/screens/core/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,9 @@ class PasswordPage extends StatelessWidget {
         backgroundColor: Colors.green,
         colorText: Colors.white,
       );
-      Get.offAllNamed('/home');  
+      Get.offAllNamed(
+        Routes.mainRoutePage,
+      );
     } catch (e) {
       Get.snackbar(
         'Error',

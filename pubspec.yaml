@@ -46,6 +46,7 @@ dependencies:
   wx_divider: ^1.0.0
   coupon_uikit: ^0.2.1
   dotted_line: ^3.2.3
+  flutter_switch: ^0.3.2
 
 dev_dependencies:
   flutter_test:

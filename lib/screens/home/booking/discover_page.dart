@@ -64,7 +64,6 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     const SizedBox(width: 40),
                   ],
                 ),
-                h30,
                 Text(
                   'Discover\na new world',
                   style: TextStyle(
@@ -77,10 +76,10 @@ class _DiscoverPageState extends State<DiscoverPage> {
             ),
           ),
           Positioned(
-            bottom: 0, // Position the container at the bottom
+            bottom: 0,
             child: Container(
-              width: MediaQuery.of(context).size.width, // Full screen width
-              height: 520,
+              width: MediaQuery.of(context).size.width,
+              height: 480,
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -89,7 +88,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(24.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -104,7 +103,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                               groupValue: selectedOption,
                               onChanged: (value) {
                                 setState(() {
-                                  selectedOption = value as int?;
+                                  selectedOption = value;
                                   print("Selected: One-way");
                                 });
                               },
@@ -121,8 +120,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                               groupValue: selectedOption,
                               onChanged: (value) {
                                 setState(() {
-                                  selectedOption = value as int?;
-                                  print("Selected: Round Trip");
+                                  selectedOption = value;
                                 });
                               },
                             ),
@@ -147,7 +145,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                           15,
                         ),
                       ),
-                      height: 58,
+                      height: 48,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -193,7 +191,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                           15,
                         ),
                       ),
-                      height: 58,
+                      height: 48,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -229,7 +227,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                           15,
                         ),
                       ),
-                      height: 58,
+                      height: 48,
                       child: GestureDetector(
                         onTap: () {
                           Get.bottomSheet(
@@ -310,7 +308,6 @@ class _DiscoverPageState extends State<DiscoverPage> {
                                             fontSize: 20,
                                             color: white,
                                             fontWeight: FontWeight.bold,
-
                                           ),
                                         ))
                                   ],
@@ -341,12 +338,52 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     ),
                     h10,
                     const Text(
-                      'From',
+                      'Travelers',
                       style: TextStyle(
                         fontSize: 16,
                       ),
                     ),
                     h5,
+                    Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: greyish,
+                        borderRadius: BorderRadius.circular(
+                          15,
+                        ),
+                      ),
+                      height: 48,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          w10,
+                          Icon(
+                            Icons.person_3_outlined,
+                            color: darkBlue,
+                            size: 26,
+                          ),
+                          w10,
+                          const Text(
+                            '1 Adult, 1 child, 0 Infant',
+                            style: TextStyle(
+                              fontSize: 18,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    h10,
+                    Button.gobutton(
+                      () {
+                        Get.toNamed(
+                          Routes.flightList,
+                        );
+                      },
+                      Text(
+                        'Search flights',
+                        style: TextStyle(fontSize: 20, color: white),
+                      ),
+                    ),
                   ],
                 ),
               ),
